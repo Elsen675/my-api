@@ -5,7 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-*8&ga*175dmqsgn&fjp8d+#y$55pmq+^8$73qerr3wmvc!phoh'
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['my-api-fdpd.onrender.com', 'localhost', '127.0.0.1']
 
