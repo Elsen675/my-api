@@ -1,56 +1,56 @@
-## Welcome to My Movie API
+# My Movie API Project
+
 ## Task
-Bu layihənin məqsədi 1000-dən çox film datasına malik olan, yüksək performanslı və peşəkar sənədləşdirilmiş bir REST API yaratmaqdır. Layihədə əsas hədəf böyük həcmli datanı (1,000+ records) idarə etmək, Redis vasitəsilə keşləmə tətbiq etmək və Full CRUD funksionallığını təmin etməkdir.
+The goal of this project is to create a high-performance, professionally documented REST API with a significant dataset (over 1,000 records). Key objectives include managing large-scale data, implementing caching via Redis, providing Full CRUD functionality, and integrating a GraphQL interface.
 
 ## Description
-Problem Django Rest Framework (DRF) istifadə edilərək kompleks şəkildə həll olunub:
+The project is built using Django Rest Framework (DRF) with a focus on scalability and modern API standards:
 
-Data Significance (Question 2): 1,000-dən çox film datası xüsusi fill_data.py scripti vasitəsilə bazaya yüklənmişdir.
+Data Significance (Question 2): Over 2,100 movie records are present in the database, generated via a custom `fill_data.py` script to ensure data depth.
+Cloud Hosted (Question 1): Fully deployed and live on Render.
+Authentication (Question 3 & 4):Supports User Registration and Token-based Authentication.
+Redis Caching (Question 5): Integrated with `django-redis` to optimize performance for high-traffic endpoints.
+OAuth Integration (Question 6): Structure prepared for OAuth2 protocol via `django-oauth-toolkit`.
+Pagination (Question 8): Global pagination implemented (10-20 items per page) to handle large result sets efficiently.
+Full CRUD (Question 9, 10, 11): Complete Resource management (Create, Read, Update, Delete) via DRF `ModelViewSet`.
+GraphQL Interface (Question 12): Interactive **GraphiQL interface provided for flexible data querying.
+Documentation: Fully interactive Swagger/OpenAPI documentation.
 
-Redis Caching (Question 5): Performansı optimallaşdırmaq üçün django-redis inteqrasiya olunub. GET /api/movies/ endpointi 15 dəqiqəlik keşlənir.
-
-Authentication & OAuth (Question 3, 4, 6): Sistem həm Token Authentication, həm də social auth (OAuth) strukturuna uyğun quraşdırılıb.
-
-Pagination (Question 8): Böyük datanı idarə etmək üçün qlobal Pagination (hər səhifədə 20 element) tətbiq olunub.
-
-Full CRUD (Question 9, 10, 11): ModelViewSet vasitəsilə resursların yaradılması (POST), yenilənməsi (UPDATE) və silinməsi (DESTROY) tam dəstəklənir.
-
-Documentation (Question 12): Bütün endpointlər və interfeys drf-yasg (Swagger/OpenAPI) vasitəsilə interaktiv şəkildə sənədləşdirilib.
-
-Deployment (Question 1): Layihə Render platformasında canlıya çıxarılıb və Cloud mühitində işləyir.
-
-Project Links
-Live API & Swagger Docs: https://my-api-fdpd.onrender.com/swagger/
-
-GitHub Repository: https://github.com/Elsen675/my-api
+ 🔗 Project Links
+Live API & Swagger Docs: [https://my-api-fdpd.onrender.com/](https://my-api-fdpd.onrender.com/)
+GraphQL Interface [https://my-api-fdpd.onrender.com/graphql/](https://my-api-fdpd.onrender.com/graphql/)
+GitHub Repository: [https://github.com/Elsen675/my-api](https://github.com/Elsen675/my-api)
 
 ## Installation
-Virtual mühiti yaradın: python -m venv venv
-
-Kitabxanaları yükləyin: pip install -r requirements.txt
-
-Verilənlər bazasını hazırlayın: python manage.py migrate
-
-Data Generatoru işlədin: python fill_data.py (1000+ data üçün)
-
-Serveri başladın: python manage.py runserver
+Clone the repository:
+    `git clone https://github.com/Elsen675/my-api.git`
+Create a virtual environment:
+    `python -m venv venv`
+Activate venv:
+    `source venv/bin/activate` (Linux/Mac) or `venv\Scripts\activate` (Windows)
+Install dependencies:
+    `pip install -r requirements.txt`
+Run migrations:
+    `python manage.py migrate`
+Start the server:
+    `python manage.py runserver`
 
 ## Usage
-Authentication
-Token almaq üçün:
-POST /api-token-auth/ (Body: username, password)
+ Authentication
+To obtain a token:
+Endpoint: `POST /api-token-auth/`
+Payload: `{"username": "your_user", "password": "your_password"}`
 
-API Endpoints
-List Movies (Cached & Paginated): GET /api/movies/
-
-Create Movie: POST /api/movies/ (Auth Required)
-
-Update Movie: PUT /api/movies/{id}/ (Auth Required)
-
-Delete Movie: DELETE /api/movies/{id}/ (Auth Required)
+ Main API Endpoints
+List Movies (Cached & Paginated): `GET /api/movies/`
+Create Movie: `POST /api/movies/` (Token Required)
+Update Movie: `PUT /api/movies/{id}/` (Token Required)
+Delete Movie: `DELETE /api/movies/{id}/` (Token Required)
+GraphQL UI: `GET /graphql/`
 
 ## The Core Team
-Elshan Ahmedov - Software Engineering Student at Qwasar SV.
+**Elshan Ahmedov** - Software Engineering Student at Qwasar SV.
 
+---
 <span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
 <span><img alt='Qwasar SV' src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px' /></span>
