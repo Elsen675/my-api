@@ -37,4 +37,6 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     
     path('api-token-auth/', views.obtain_auth_token),
+
+    # path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]
