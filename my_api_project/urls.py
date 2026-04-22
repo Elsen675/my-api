@@ -6,6 +6,10 @@ from drf_yasg import openapi
 from rest_framework.authtoken import views
 from graphene_django.views import GraphQLView
 from django.views.generic import RedirectView
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -20,10 +24,19 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('', RedirectView.as_view(url='swagger/', permanent=False)),
+    
     path('admin/', admin.site.urls),
     path('api/', include('core.urls')),
+    
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-    path('api-token-auth/', views.obtain_auth_token),
+    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+    
     path("graphql/", GraphQLView.as_view(graphiql=True)),
-#    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    
+    path('api-token-auth/', views.obtain_auth_token),
+
+    # path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]
