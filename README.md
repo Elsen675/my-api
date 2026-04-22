@@ -42,13 +42,13 @@ Endpoint: `POST /api-token-auth/`
 Payload: `{"username": "your_user", "password": "your_password"}`
 
  Main API Endpoints
-List Movies (Cached & Paginated): `GET /api/movies/`
+List Movies (Cached & Paginated):** `GET /api/movies/`
 Create Movie: `POST /api/movies/` (Token Required)
 Update Movie: `PUT /api/movies/{id}/` (Token Required)
 Delete Movie: `DELETE /api/movies/{id}/` (Token Required)
 GraphQL UI: `GET /graphql/`
 
-## The Core Team
+## 👥 The Core Team
 **Elshan Ahmedov** - Software Engineering Student at Qwasar SV.
 
 ---
