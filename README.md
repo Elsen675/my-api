@@ -1,5 +1,6 @@
 # 🎬 My Movie API - High Performance REST & GraphQL Service
 
+<<<<<<< HEAD
 ## 🎯 Project Overview
 This project is a professionally architected, high-performance REST API developed as part of the Qwasar SV curriculum. It manages a significant dataset of over **2,100 movies**, featuring advanced caching, robust authentication, and dual-interface (REST & GraphQL) capabilities.
 
@@ -12,6 +13,20 @@ This project is a professionally architected, high-performance REST API develope
 
 ## 🛠 Features & Requirement Coverage
 
+=======
+## Task
+This project is a professionally architected, high-performance REST API developed as part of the Qwasar SV curriculum. It manages a significant dataset of over **2,100 movies**, featuring advanced caching, robust authentication, and dual-interface (REST & GraphQL) capabilities.
+
+## Description
+* **API & Swagger Documentation:** [https://my-api-fdpd.onrender.com/swagger/](https://my-api-fdpd.onrender.com/swagger/)
+* **GraphQL Interface:** [https://my-api-fdpd.onrender.com/graphql/](https://my-api-fdpd.onrender.com/graphql/)
+* **Admin Panel:** [https://my-api-fdpd.onrender.com/admin/](https://my-api-fdpd.onrender.com/admin/)
+
+---
+
+ 🛠 Features & Requirement Coverage
+
+>>>>>>> 85a94802479321fd2d4b37f7a8f7ea54469a3230
 | Question | Requirement | Implementation Detail | Status |
 | :--- | :--- | :--- | :--- |
 | **Q1** | **Cloud Hosted** | Fully deployed on **Render** with automated CI/CD. | ✅ Yes |
@@ -27,14 +42,24 @@ This project is a professionally architected, high-performance REST API develope
 
 ---
 
+<<<<<<< HEAD
 ## 🔐 Authentication & OAuth2 Protocol
 
 ### **JWT Authentication (Primary)**
+=======
+ 🔐 Authentication & OAuth2 Protocol
+
+ **JWT Authentication (Primary)**
+>>>>>>> 85a94802479321fd2d4b37f7a8f7ea54469a3230
 We use **JSON Web Tokens (JWT)** for secure, stateless authentication. 
 1. Get Token: `POST /api/token/` with credentials.
 2. Use Token: Add `Authorization: Bearer <your_token>` to your request headers.
 
+<<<<<<< HEAD
 ### **OAuth2 Integration (Question 6)**
+=======
+ **OAuth2 Integration (Question 6)**
+>>>>>>> 85a94802479321fd2d4b37f7a8f7ea54469a3230
 The project structure is fully compatible with the **OAuth2** protocol.
 * **Provider:** `django-oauth-toolkit` is integrated into the core architecture.
 * **Endpoints:** The system is prepared to handle `/o/authorize/` and `/o/token/` flows for third-party application integration.
@@ -42,7 +67,11 @@ The project structure is fully compatible with the **OAuth2** protocol.
 
 ---
 
+<<<<<<< HEAD
 ## ⚡ Performance Optimization (Redis)
+=======
+ ⚡ Performance Optimization (Redis)
+>>>>>>> 85a94802479321fd2d4b37f7a8f7ea54469a3230
 To meet the high-performance requirement (**Question 5**), we use **Redis** as our primary cache backend:
 * **Session Storage:** Sessions are offloaded to Redis to ensure horizontal scalability.
 * **Data Caching:** Frequently accessed movie lists are cached to reduce database hits and minimize latency.
@@ -52,12 +81,20 @@ To meet the high-performance requirement (**Question 5**), we use **Redis** as o
 
 ## Usage
 
+<<<<<<< HEAD
 ### **Interactive Swagger (OpenAPI)**
+=======
+ **Interactive Swagger (OpenAPI)**
+>>>>>>> 85a94802479321fd2d4b37f7a8f7ea54469a3230
 Access the full interactive documentation at `/swagger/`. You can test all **CRUD** operations (POST, PUT, DELETE) directly from the browser:
 1. Click **"Authorize"** and enter your JWT Token.
 2. Use the **"Try it out"** button on any endpoint.
 
+<<<<<<< HEAD
 ### **GraphQL Interface**
+=======
+ **GraphQL Interface**
+>>>>>>> 85a94802479321fd2d4b37f7a8f7ea54469a3230
 For flexible querying, use our GraphQL endpoint at `/graphql/`.
 * Example Query:
     ```graphql
